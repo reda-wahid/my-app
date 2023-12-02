@@ -69,12 +69,7 @@ function NavBar() {
             to="/products"
             data-te-nav-link-ref>Products</NavLink>
         </li>
-        {/*<!-- Projects link --> */}
-        <li className="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-          <NavLink
-            className="text-neutral-500 transition duration-200 hover:hover:text-red-500 hover:ease-in-out focus:hover:text-red-500 disabled:text-black/30 motion-reduce:transition-none   lg:px-2 [&.active]:text-red-600  "
-            to="/" data-te-nav-link-ref>Contact</NavLink>
-        </li>
+  
       </ul>
     </div>
 

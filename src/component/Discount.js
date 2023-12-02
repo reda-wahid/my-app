@@ -3,6 +3,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Ddata from "../Assets/Discount.json"
+import { Fragment } from 'react'
 
 
 function Discount() {
@@ -21,17 +22,19 @@ function Discount() {
         <p className='text-red-500 font-bold text-5xl'>Discount</p>
         
       <Slider {...settings}>
-        {Ddata.map((value, index) => {
+        {Ddata.map((value) => {
           return (
-            <>
-              <div className='box product border-spacing-3 border-1 border-red-50 shadow-md rounded-full text-center grid gap-2 m-3 bg-white  ' key={index}>
+            
+            <Fragment key={value.id}>
+              <div className='box product border-spacing-3 border-1 border-red-50 shadow-md rounded-full text-center grid gap-2 m-3 bg-white  ' >
                 <div className='img'>
                   <img src={value.cover} alt='' width='100%' />
                 </div>
                 <h4>{value.name}</h4>
-                <span>{value.price}</span>
+                <p>{value.price}</p>
               </div>
-            </>
+              </Fragment>
+           
           )
         })}
       </Slider>
