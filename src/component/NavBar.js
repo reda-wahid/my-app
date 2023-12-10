@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 function NavBar() {
   initTE({ Collapse, Dropdown });
-  let countprod = JSON.parse(localStorage.getItem('cart')).length;
+  let countprod = JSON.parse(localStorage.getItem('cart'))?JSON.parse(localStorage.getItem('cart')).length:0;
 
   console.log(countprod);
   return (
@@ -86,7 +86,7 @@ function NavBar() {
       <div className="relative">
         <NavLink
           className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none"
-          to="/login"role="button"aria-expanded="false">
+          to="/"role="button"aria-expanded="false">
           {/**<!-- User avatar --> */}
           <img src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
             className="rounded-full"
